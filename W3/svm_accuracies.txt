@@ -1,0 +1,2 @@
+Accuracy with 70-30 train-test split: 0.8882
+Mean accuracy with 10-fold cross-validation: 0.8918
