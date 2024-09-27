@@ -1,0 +1,6 @@
+train: ../selected_train_images/images  # Path to 400 selected training images
+val: ../images/test                     # Path to testing/validation images (used for validation during training)
+
+# Classes
+nc: 1                # Number of classes 
+names: ['Graffiti']  # Class name
