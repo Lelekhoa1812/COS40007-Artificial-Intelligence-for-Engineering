@@ -7,3 +7,7 @@ Group members:
 - Nguyen Hung Nguyen  
 - Trung Kien Nguyen  
 - Saw Ko Ko Oo  
+
+Dataset: LTE_KPI.csv  
+Topic: 5G Network Quality for Electrical Engineer  
+Acknowledgement: This dataset is private and confidential industrial asset of Ericsson Vietnam. Do not use it without permission!  
