@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5G Network Performance by Geographic Zone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="website icon" type="png" href="pics/logo.png" >
+</head>
+<body>
+    <!-- Introduction Section -->
+    <section class="introduction-section" id="section1">
+        <h1>5G Network Performance by Geographic Zone</h1>
+        <img src="pics/5gbackground.jpg" alt="5G Background" class="background-img">
+    </section>
+
+    <!-- Project Information Section -->
+    <section class="info-section" id="section2">
+        <h2>Motivation</h2>
+        <p>In this project, we leverage a 5G network performance dataset from Ericsson Vietnam to analyze network performance across different geographical zones. By categorizing regions based on network performance metrics like throughput, latency, and drop rates, and focusing on the key feature, Total_Throughput_per_User, we aim to provide insights that enable service providers to optimize resources and improve user experience. Predicting future network performance based on location (site) and sector (or cellular site's segment) data helps enable proactive maintenance and strategic planning, ultimately supporting better decision-making for enhancing 5G infrastructure.​</p>
+        <p>Key steps in our process include handling missing values, data preprocessing, data labelling and feature engineering. We addressed invalid data entries, removed irrelevant columns, normalized numerical values, and created composite metrics to enhance the accuracy of our predictive models.​</p>
+
+        <h2>Real-world Applications</h2>
+        <ul>
+            <li>Network Optimization and Load Balancing</li>
+            <li>Predictive Maintenance</li>
+            <li>5G Infrastructure Planning</li>
+            <li>User Experience Enhancement</li>
+            <li>Data-Driven Marketing Strategies</li>
+        </ul>
+    </section>
+
+    <!-- Dataset Section -->
+    <section class="dataset-section" id="section3">
+        <h2>Dataset Information</h2>
+        <div class="image-container">
+            <div class="marker-container">
+                <img id="locationMarker" src="pics/location_marker.png" alt="Location Marker" class="clickable">
+                    <!-- Markers for each site -->
+                    <div class="site-marker" data-site="Site 1" data-image="q1.jpg" style="top: 459px; left: 217px;"></div>
+                    <div class="site-marker" data-site="Site 2" data-image="q1.jpg" style="top: 469px; left: 210px;"></div>
+                    <div class="site-marker" data-site="Site 3" data-image="bt.jpg" style="top: 464px; left: 229px;"></div>
+                    <div class="site-marker" data-site="Site 4" data-image="q1.jpg" style="top: 456px; left: 210px;"></div>
+                    <div class="site-marker" data-site="Site 5" data-image="bh.jpeg" style="top: 92px; left: 406px;"></div>
+                    <div class="site-marker" data-site="Site 6" data-image="q12.jpg" style="top: 357px; left: 71px;"></div>
+                    <div class="site-marker" data-site="Site 7" data-image="q1.jpg" style="top: 454px; left: 221px;"></div>
+                    <div class="site-marker" data-site="Site 8" data-image="tb.jpg" style="top: 456px; left: 181px;"></div>
+                    <div class="site-marker" data-site="Site 9" data-image="bd.jpg" style="top: 53px; left: 152px;"></div>
+                    <div class="site-marker" data-site="Site 10" data-image="bd.jpg" style="top: 72px; left: 157px;"></div>
+                </div>
+            <img id="sectorInfo" src="pics/sector.png" alt="Sector Information" class="clickable">
+        </div>
+        <div id="locationModal" class="modal">
+            <span class="close">&times;</span>
+            <p>There are 10 5G testing sites divided to 4  major groups, locating at Ho Chi Minh city, its outskirt region, Binh Duong province, and Bien Hoa city, which testing the effort of Ericsson and VNPT (their partner) leveraging 5G performance at civilization and industrial manufacturing in Vietnam.</p>
+        </div>
+        <div id="sectorModal" class="modal">
+            <span class="close">&times;</span>
+            <p>A 5G cellular tower typically provides coverage through sectors. A typical tower covers 360 degrees, and this is divided into three sectors, each spanning 120 degrees. These sectors are labeled as Site A, Site B, and Site C.</p>
+            <p>Each sector has its own set of antennas, which helps manage network load and improve signal quality for users in different areas.</p>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>
