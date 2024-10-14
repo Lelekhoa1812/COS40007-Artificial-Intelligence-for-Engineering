@@ -21,12 +21,24 @@ section {
     background-size: cover;
     background-position: center;
 }
-.info-section, .dataset-section {
+.info-section {
     background-color: #180035; /* Dark Purple Background */
     color: white;
 }
 .dataset-section {
     background-color: #002a2e; /* Dark Cyan Background */
+    color: white;
+}
+.info-section {
+    background-color: #180035; /* Dark Purple Background */
+    color: white;
+}
+.input-section {
+    background-color: #0a2e00; /* Dark Green Background */
+    color: white;
+}
+.output-section {
+    background-color: #28000f; /* Dark Pink Background */
     color: white;
 }
 

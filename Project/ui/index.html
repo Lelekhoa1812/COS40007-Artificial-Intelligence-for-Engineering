@@ -61,6 +61,42 @@
         </div>
     </section>
 
+     <!-- User Input Section -->
+     <section class="input-section" id="section4">
+        <h2>Enter Network Performance Features</h2>
+        <form id="prediction-form"> 
+            <label for="dl_user_throughput">DL User Throughput (Mbps):</label>
+            <input type="text" id="dl_user_throughput" name="dl_user_throughput"><br><br>
+
+            <label for="ul_user_throughput">UL User Throughput (Mbps):</label>
+            <input type="text" id="ul_user_throughput" name="ul_user_throughput"><br><br>
+
+            <label for="average_dl_pdcp">Average DL PDCP Throughput (Mbit/s):</label>
+            <input type="text" id="average_dl_pdcp" name="average_dl_pdcp"><br><br>
+
+            <label for="average_ul_pdcp">Average UL PDCP Throughput (Mbit/s):</label>
+            <input type="text" id="average_ul_pdcp" name="average_ul_pdcp"><br><br>
+            <!-- Add other feature inputs adjusting the backend -->
+            <button type="button" onclick="makePrediction()">Predict Performance</button>
+        </form>
+    </section>
+
+    <!-- Prediction Output Section -->
+    <section class="output-section" id="section5">
+        <h2>Prediction Results</h2>
+        <p id="predicted-zone">Predicted Zone: </p>
+        <!-- UI incompleted, require work -->
+        <!-- Show map with highlighted zone, TODO: showcasing the site id and img description to the zone (site) matches -->
+        <div id="map-container">
+            <!-- Display the map with the predicted zone highlighted -->
+            <img id="prediction-map" src="pics/location_marker.png" alt="Prediction Map">
+        <!-- Speedometer config TODO: update script too -->
+        </div>
+        <div id="speedometer-container">
+            <canvas id="speedometer" width="300" height="300"></canvas>
+        </div>
+    </section>
+
     <script src="scripts.js"></script>
     <script src="map.js"></script>
 </body>
