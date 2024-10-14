@@ -120,9 +120,6 @@ section {
         width: 90%; /* Increase modal width for small screens */
         padding: 10px; /* Reduce padding */
     }
-    .clickable {
-        width: 200px; /* Reduce image size for smaller screens */
-    }
     .modal-content {
         width: 90%; /* Adjust content width to fit small screens */
         padding: 10px;
