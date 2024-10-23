@@ -1,0 +1,405 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Dataset section styles */
+h2:not(.info-section h2):not(.introduction-section h2) {
+    font-size: 2.5rem;
+    text-align: center; /* Center the heading */
+}
+
+/* Header styles */
+.introduction-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/ae/7c/d0/ae7cd05d9438e3a42f955718affa1c9b.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.introduction-section h1 {
+    font-size: 5rem;
+    font-family: 'Orbitron', 'Oxanium', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(to bottom, white, #00bfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    letter-spacing: 5px;
+    line-height: 1.2;
+    text-shadow: 
+        0 0 60px white, 
+        0 0 120px white, 
+        0 0 180px white;
+}
+
+.scroll-link {
+    font-size: 5rem;
+    font-weight: 700;
+    background: linear-gradient(to bottom, white, #ffd900);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+        0 0 50px #ffd900, 
+        0 0 100px #ffd900, 
+        0 0 150px #ffd900;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-link:hover {
+    text-shadow: 
+        0 0 60px #ffd900, 
+        0 0 120px #ffd900, 
+        0 0 180px #ffd900;
+    transform: scale(1.05);
+}
+
+/* Info section styles */
+.info-section {
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.info-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.info-section h4 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+
+.info-section p3 {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+.info-section p, .info-section ul {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.info-section ul li:before {
+    content: "• ";
+    color: #3498db;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.info-section .p3 {
+    font-weight: bold;
+}
+/* Prediction section styles */
+#prediction-section {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#prediction-section h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#prediction-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+#prediction-form label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+#prediction-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#prediction-form button {
+    grid-column: span 2;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+#prediction-form button:hover {
+    background-color: #2980b9;
+}
+
+#prediction-section h4 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    padding-top: 15px;
+}
+#prediction-section img {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+#find-more {
+    color: rgb(111, 0, 87);
+}
+
+
+/* Raw features drop-down inside of Composite features */
+#secondaryCellDropdown,
+#setupSuccessDropdown {
+    grid-column: span 2; /* Make the dropdown content span both columns */
+    display: none;       /* Hidden by default */
+}
+#secondaryCellDropdown.show,
+#setupSuccessDropdown.show {
+    display: block;
+    /* width: 100%; Ensure the dropdown uses full width */
+}
+
+/* Output section styles */
+.output {
+    background-color: #fff;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.output h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.output p {
+    text-align: left;
+}
+
+.clickable {
+    cursor: pointer;
+    width: 500px; /* Increase width for larger images */
+    height: auto;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: black;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content-wrapper {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.info-section, #prediction-section, .output {
+    min-height: auto;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 50%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensures the modal is centered */
+    width: 80%;  /* Adjust width */
+    max-width: 800px;  /* Max width for larger screens */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    overflow: auto; /* Ensure scroll if content overflows */
+}
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    width: 100%; /* Full width inside the modal */
+    color: rgb(255, 255, 255);
+}
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content img {
+    width: 100%;  /* Take full modal width */
+    height: auto; /* Scaling */
+}
+
+/* Marker setter */
+.marker-container {
+    position: relative;
+}
+.site-marker {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column; /* Align label and image vertically */
+    align-items: center;
+}
+.tooltip p { /* text */
+    margin: 0;
+    font-size: 12px;
+}
+.tooltip img { /* img */
+    margin-top: 5px; /* Space between text and image */
+    width: 100px;
+    height: 100px;
+}
+
+/* Output section */
+.speedometer {
+    width: 400px;
+    height: 400px;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#locationOutput {
+    width: 500px; /* Increase width for larger images */
+    height: auto;
+}
+
+#output-section {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.output-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.location-map img {
+    width: 500px; /* Increase width for larger images */
+    height: auto;
+}
