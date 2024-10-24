@@ -154,12 +154,32 @@ function toggleDropdown(dropdownId, iconId) {
 
 // Function to populate the result once obtain it
 function handlePredictionResponse(performanceVal, siteId, sectorId) {
+    console.log("Observed: ", performanceVal, siteId, sectorId);
+    
+    // Adjust the sectorId from numeric to letter values (0 -> A, 1 -> B, 2 -> C)
+    switch (sectorId) {
+        case 0:
+            sectorId = "A";
+            break;
+        case 1:
+            sectorId = "B";
+            break;
+        case 2:
+            sectorId = "C";
+            break;
+        default:
+            sectorId = "Unknown";  // Handle unexpected values
+    }
+
+    // Increment siteId by 1
+    siteId = parseInt(siteId) + 1;
+
     // Update the result display in the HTML with the predicted values
     document.getElementById('predictedPerformance').textContent = performanceVal;
     document.getElementById('predictedSite').textContent = siteId;
     document.getElementById('predictedSector').textContent = sectorId;
     
     // Optionally, you can trigger other actions here like map updates or animations
-    addPinToMap(siteId);                       // Handle the site prediction
+    addPinToMap(siteId);                       // Handle the site prediction by adding pin to map
     adjustNeedle(performanceVal);              // Rotate the needle based on the performance
 }
