@@ -7,6 +7,7 @@ import pandas as pd
 
 # Load the best model
 model_per = tf.keras.models.load_model('best_ann_model_speed.h5')  # Best Model for performance
+scaler_per = joblib.load('scaler_performance.pkl')                     # Scaler for performance
 model_sec = joblib.load('model_top_sec.pkl')                       # Best Model for sector
 model_site = joblib.load('model_top_site.pkl')                     # Best Model for site
 
@@ -35,8 +36,11 @@ def predict():
             'Inter Frequency Handover Success Rate (%)' 
         ])
 
+        # Normalize the features using the loaded scaler
+        features_per_scaled = scaler_per.transform(features_per)
+
         # Predict using the performance model
-        prediction_per = model_per.predict(features_per)
+        prediction_per = model_per.predict(features_per_scaled)
         prediction_per_list = prediction_per.tolist()
 
         print(f"Performance Prediction: {prediction_per}")
