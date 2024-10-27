@@ -12,4 +12,4 @@ Dataset: LTE_KPI.csv
 Topic: 5G Network Quality for Electrical Engineer  
 Acknowledgement: This dataset is private and confidential industrial asset of Ericsson Vietnam. Do not use it without permission!   
 
-UI Live Demo: https://lelekhoa1812.github.io/COS40007-Artificial-Intelligence-for-Engineering/Project/web/ui 
+UI Live Demo: https://lelekhoa1812.github.io/COS40007-Artificial-Intelligence-for-Engineering/Project/server/ui 
