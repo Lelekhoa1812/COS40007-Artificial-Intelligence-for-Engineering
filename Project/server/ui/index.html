@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5G Network Performance by Geographic Zone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="website icon" type="png" href="pics/logo.png" >
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Oxanium:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/path/to/favicon.ico">
+</head>
+<body>
+    <!-- Introduction Section -->
+    <div class="introduction-section">
+        <h1>
+            5G PERFORMANCE AND ZONE
+            <a href="#prediction-section" class="scroll-link">PREDICTION</a>
+        </h1>
+    </div>
+
+    <div class="content-wrapper">
+        <!-- Project Information Section -->
+        <div class="info-section" id="section2a">
+            <h2>Motivation</h2>
+            <p>In this project, we leverage a 5G network performance dataset from Ericsson Vietnam to analyze network performance across different geographical zones. By categorizing regions based on network performance metrics, we aim to provide insights that enable service providers to optimize resources and improve user experience. Predicting future network performance based on location (site) and sector (or cellular site's segment) data helps enable proactive maintenance and strategic planning, ultimately supporting better decision-making for enhancing 5G infrastructure.​</p>
+            <p>Key steps in our process include handling missing values, data preprocessing, data labelling, feature engineering and data training. We addressed invalid data entries, removed irrelevant columns, normalized numerical values, and created composite metrics to enhance the accuracy of our predictive models.​</p>
+
+            <h2>Real-world Applications</h2>
+            <ul>
+                <li data-title="By analyzing network performance metrics such as throughput and drop rates across different zones, service providers can dynamically adjust network resources to balance load more efficiently, preventing bottlenecks in high-traffic areas.">Network Optimization and Load Balancing</li>
+                <li data-title="Using the predictive aspect of this project, service providers can anticipate network issues or degradation in specific zones and take proactive measures to maintain optimal performance, reducing service outages and improving reliability.">Predictive Maintenance</li>
+                <li data-title="Insights gained from categorizing network performance by zone can inform where to deploy additional 5G infrastructure, such as new base stations, to enhance coverage in underserved areas or strengthen capacity in high-demand regions.">5G Infrastructure Planning</li>
+                <li data-title="Understanding network performance allows telecom operators to improve user experience by ensuring consistent data speeds and lower latency, particularly in critical use cases like autonomous vehicles, smart cities, and remote healthcare.">User Experience Enhancement</li>
+                <li data-title="Service providers can use these network insights to tailor marketing strategies, offering enhanced service packages or targeted promotions in zones with high data consumption or network performance challenges.​">Data-Driven Marketing Strategies</li>
+            </ul>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Project Information Section -->
+            <div class="info-section" id="section2b">
+                <h2>Final Result with Data Training</h2>
+                <div class="NR-section" id="section2b1">
+                    <h4>Neural Network</h4>
+                    <ul>
+                        <p3>With dataset before feature engineering:</p3>
+                        <ul>
+                            <li>MSE: 0.16162513943281265</li>
+                        </ul>
+                        <p3>With dataset after feature engineering:</p3>
+                        <ul>
+                            <li>MSE: 0.0018675948165182328</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="RF-section" id="section2b2">
+                    <h4>Random Forrest</h4>
+                    <ul>
+                        <p3>With dataset before feature engineering:</p3>
+                        <ul>
+                            <li>Accuracy sector ID: 0.79​</li>
+                            <li>Accuracy site ID: 0.77</li>
+                        </ul>
+                        <p3>With dataset after feature engineering:</p3>
+                        <ul>
+                            <li>Accuracy sector ID: 0.79​</li>
+                            <li>Accuracy site ID: 0.77</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div id="NRModal" class="modal">
+                    <span class="close">&times;</span>
+                    <h4>Observation and Evaluation​</h4>
+                    <p>After feature engineering, the model performed significantly better</p>
+                    <p>This suggests that Feature engineering made a major positive impact on the model’s performance</p>
+                </div>
+                <div id="RFModal" class="modal">
+                    <span class="close">&times;</span>
+                    <h4>Observation and Evaluation​</h4>
+                    <p>After feature selection, performance still maintains. </p>
+                    <p>Model will still perform well even if unnecessary features are removed.​</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dataset Section -->
+        <div class="dataset-section" id="section3">
+            <h2>Dataset Information</h2>
+            <div class="image-container">
+                <div class="marker-container">
+                    <img id="locationDemo" src="pics/location_plain.png" alt="Location Marker" class="clickable">
+                        <!-- Markers for each site -->
+                        <div class="site-marker" data-site="Site 1" data-image="q1.jpg" site-purpose="Economic Zone" style="top: 459px; left: 217px;"></div>
+                        <div class="site-marker" data-site="Site 2" data-image="q1.jpg" site-purpose="Economic Zone" style="top: 469px; left: 210px;"></div>
+                        <div class="site-marker" data-site="Site 3" data-image="bt.jpeg" site-purpose="Civilization Zone" style="top: 464px; left: 229px;"></div>
+                        <div class="site-marker" data-site="Site 4" data-image="q1.jpg" site-purpose="Economic Zone" style="top: 456px; left: 210px;"></div>
+                        <div class="site-marker" data-site="Site 5" data-image="bh.jpeg" site-purpose="Logistic Zone" style="top: 92px; left: 406px;"></div>
+                        <div class="site-marker" data-site="Site 6" data-image="q12.jpg" site-purpose="Aviation Zone" style="top: 357px; left: 71px;"></div>
+                        <div class="site-marker" data-site="Site 7" data-image="q1.jpg" site-purpose="Economic Zone" style="top: 454px; left: 221px;"></div>
+                        <div class="site-marker" data-site="Site 8" data-image="tb.jpg" site-purpose="Civilization Zone" style="top: 456px; left: 181px;"></div>
+                        <div class="site-marker" data-site="Site 9" data-image="bd.jpg" site-purpose="Advanced Industrial Zone" style="top: 53px; left: 152px;"></div>
+                        <div class="site-marker" data-site="Site 10" data-image="bd.jpg" site-purpose="Advanced Industrial Zone" style="top: 72px; left: 157px;"></div>
+                </div>
+                <img id="sectorInfo" src="pics/sector.png" alt="Sector Information" class="clickable">
+            </div>
+            <div id="locationModal" class="modal">
+                <span class="close">&times;</span>
+                <p>There are 10 - 5G testing sites divided to 4 major groups, locating at Ho Chi Minh city, its outskirt region, Binh Duong province, and Bien Hoa city, which target in testing the effort of Ericsson and VNPT (their partner) leveraging 5G performance at civilization, industrial manufacturing, and aviation in Vietnam.</p>
+            </div>
+            <div id="sectorModal" class="modal">
+                <span class="close">&times;</span>
+                <p>A 5G cellular tower typically provides coverage through sectors. A typical tower covers 360 degrees, and this is divided into three sectors, each spanning 120 degrees. These sectors are labeled as Sector A, B, and C.</p>
+                <p>Each sector has its own set of antennas, which helps manage network load and improve signal quality for users in different areas.</p>
+            </div>
+        </div>
+
+        <!-- Prediction Section -->
+        <div id="prediction-section">
+            <h2>Network Performance Features</h2>
+            <h4>Overview</h4>
+            <p>As part of our advanced AI-driven network optimization, we enable network engineers to input the key performance indicators below. These features, derived from network telemetry data, will be used to predict the optimal cellular tower location and expected performance. This prediction is powered by pre-trained Neural Networks and Random Forest models. Our AI models have demonstrated strong performance, with MSE of approximately 0.0019 for tower location and performance prediction. By providing accurate feature inputs, our system will help identify the best matching Site ID and Sector ID for your network setup as well as their expected performance metric outcome. <a class="p5" id="find-more">Find More</a>.
+            <!-- Modal for displaying correlation image -->
+            <div id="predictionModal" class="modal">
+                <span class="close" id="close">&times;</span>
+                <img src="pics/chosen_features_corr.png" alt="Correlation of Chosen Features" style="width: 100%; height: auto;">
+            </div>
+            <h4>Features Input</h4>
+            <form id="prediction-form">
+                <!-- Raw Data Feature -->
+                <label for="carrier_number_dl" data-title="Carrier Number DL (earfcn) represents the specific downlink carrier frequency.">Carrier Number DL (earfcn):</label>
+                <input type="text" id="carrier_number_dl" name="carrier_number_dl">
+                <!-- Raw Data Feature -->
+                <label for="inter_freq_handover" data-title="Inter Frequency Handover Success Rate measures the success of handovers between different frequency bands in percentage.">Inter Frequency Handover Success Rate (%):</label>
+                <input type="text" id="inter_freq_handover" name="inter_freq_handover">
+                <!-- Raw Data Feature -->
+                <label for="paging_discarded" data-title="DC_E_ERBS_EUTRANCELLFDD.pmPagDiscarded refers to the number of discarded paging requests.">DC_E_ERBS_EUTRANCELLFDD.pmPagDiscarded:</label>
+                <input type="text" id="paging_discarded" name="paging_discarded">
+                <!-- Raw Data Feature -->
+                <label for="max_users" data-title="Maximum Number of Users in a Cell represents the highest number of users connected to a cell at one time.">Maximum Number of Users in a Cell:</label>
+                <input type="text" id="max_users" name="max_users">
+                <!-- Raw Data Feature --> <!-- REMOVE since having -1 correlation score -->
+                <!-- <label for="cell_downtime" data-title="DC_E_ERBS_EUTRANCELLFDD.pmCellDowntimeMan indicates the manual downtime of a cell, usually due to maintenance or failure.">DC_E_ERBS_EUTRANCELLFDD.pmCellDowntimeMan:</label>
+                <input type="text" id="cell_downtime" name="cell_downtime"> -->
+                <!-- Raw Data Feature -->
+                <label for="irat_continuity" data-title="IRAT/Session Continuity to 2G indicates the continuity of sessions when switching from LTE to 2G networks.">IRAT/Session Continuity to 2G:</label>
+                <input type="text" id="irat_continuity" name="irat_continuity">
+                <!-- Composite Data Feature: Secondary Cell Performance -->
+                <label for="secondary_cell_performance" data-title="Secondary Cell Performance is a composite metric combining the performance of secondary cells in dual connectivity scenarios.">Secondary Cell Performance</label>
+                <img id="icon-secondary-cell" src="pics/down.png" alt="down" onclick="toggleDropdown('secondaryCellDropdown', 'icon-secondary-cell')" style="cursor: pointer; width: 16px; height: 16px; margin-left: 10px;">
+                <div id="secondaryCellDropdown" style="display: none;">
+                    <label for="scell_volume_dl_mac" data-title="ScellVolume_DL_MAC measures the downlink data volume of the secondary cell.">ScellVolume_DL_MAC:</label>
+                    <input type="text" id="scell_volume_dl_mac" name="scell_volume_dl_mac">
+                    <label for="scell_traffic_volume" data-title="Scell Traffic Volume refers to the total traffic handled by the secondary cell.">Scell Traffic Volume:</label>
+                    <input type="text" id="scell_traffic_volume" name="scell_traffic_volume">
+                </div>
+                <!-- Composite Data Feature: Setup Success Rate -->
+                <label for="setup_success_rate" data-title="Setup Success Rate is a composite measure of success rates for RRC setup, intra-frequency handover, and RAB setup.">Setup Success Rate</label>
+                <img id="icon-setup-success" src="pics/down.png" alt="down" onclick="toggleDropdown('setupSuccessDropdown', 'icon-setup-success')" style="cursor: pointer; width: 16px; height: 16px; margin-left: 10px;">
+                <div id="setupSuccessDropdown" style="display: none;">
+                    <label for="ps_rrc_setup_success" data-title="PS E-UTRAN RRC Setup Success Ratio measures the percentage of successful RRC connections in the LTE network.">PS E-UTRAN RRC Setup Success Ratio (%):</label>
+                    <input type="text" id="ps_rrc_setup_success" name="ps_rrc_setup_success">
+                    <label for="intra_freq_handover" data-title="Intra Frequency Handover Success Rate measures the success rate of handovers within the same frequency.">Intra Frequency Handover Success Rate (%):</label>
+                    <input type="text" id="intra_freq_handover" name="intra_freq_handover">
+                    <label for="ps_rab_setup_success" data-title="PS E-UTRAN RAB Setup Success Rate indicates the success rate for setting up Radio Access Bearer (RAB) for packet-switched services.">PS E-UTRAN RAB Setup Success Rate (%):</label>
+                    <input type="text" id="ps_rab_setup_success" name="ps_rab_setup_success">
+                </div>
+                <!-- Composite Data Feature: Cell Availability and Downtime -->
+                <label for="cell_availability_downtime" data-title="Cell Availability and Downtime is a composite metric that captures the percentage of time a cell is available versus its downtime due to failure or maintenance.">Cell Availability and Downtime</label>
+                <img id="icon-avai-down" src="pics/down.png" alt="down" onclick="toggleDropdown('cellAvaiDowntimeDropDown', 'icon-avai-down')" style="cursor: pointer; width: 16px; height: 16px; margin-left: 10px;">
+                <div id="cellAvaiDowntimeDropDown" style="display: none;">
+                    <label for="dce_erbs_cell_down" data-title="DC_E_ERBS_EUTRANCELLFDD.pmCellDowntimeMan refers to the manual downtime of a cell, which is usually due to scheduled maintenance or manual interventions.">PS E-UTRAN RRC Setup Success Ratio:</label>
+                    <input type="text" id="dce_erbs_cell_down" name="dce_erbs_cell_down">
+                    <label for="cell_availability" data-title="Cell Availability represents the percentage of time a cell is operational and serving users without interruption.">Cell Availability:</label>
+                    <input type="text" id="cell_availability" name="cell_availability">
+                </div>
+                <button type="button" onclick="makePrediction()">Predict Performance</button>
+            </form>
+        </div>
+
+        <!-- Sector Output Section -->
+        <div id="output-section">
+            <h2>Prediction</h2>
+
+            <!-- Show results -->
+            <p>Predicted sector: <span id="predictedSector"></span></p>
+            <p>Predicted site: <span id="predictedSite"></span></p>
+            <p id="predictedPerformance" data-title="This value represents the composite metric, 'Traffic_Volume_and_Payload_Metrics,' based on various engineering processes. It includes features like average throughput, call rate, traffic volume, and more.">Predicted performance: <span id="rawPredictedPerformance"></span></p>
+
+            <div class="output-wrapper">
+                <div class="location-map">
+                    <img id="locationOutput" src="pics/location_plain.png" alt="Location Marker">
+                </div>
+                <div class="speedometer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                        <!-- Speedometer colored sections -->
+                        <path d="M10,90 A80,80 0 0,1 70,15.4" fill="none" stroke="#c00" stroke-width="20"/>
+                        <path d="M70,15.4 A80,80 0 0,1 130,15.4" fill="none" stroke="#fc0" stroke-width="20"/>
+                        <path d="M130,15.4 A80,80 0 0,1 190,90" fill="none" stroke="#0c0" stroke-width="20"/>
+                        
+                        <!-- Needle -->
+                        <line id="needle" x1="100" y1="90" x2="100" y2="20" stroke="#333" stroke-width="2" transform="rotate(-90, 100, 90)"/>
+                        
+                        <!-- Center point -->
+                        <circle cx="100" cy="90" r="5" fill="#333"/>
+                    </svg>
+                </div>
+            </div>
+            <!-- Acknowledgement button -->
+            <button id="acknowledgementButton">Acknowledgement</button>
+            <!-- Acknowledgement Modal -->
+            <div id="acknowledgementModal" class="modal">
+                <span class="close">&times;</span>
+                <h2>Acknowledgement</h2>
+                <p>Semester 2, 2024. COS40007 Artificial Intelligence for Engineering</p>
+                <p>Group 1, Tut 18.30 Tuesday - Theme 5</p>
+                <p>Group members:</p>
+                <ul>
+                    <li>Dang Khoa Le</li>
+                    <li>Bao Nguyen</li>
+                    <li>Nguyen Hung Nguyen</li>
+                    <li>Trung Kien Nguyen</li>
+                    <li>Saw Ko Ko Oo</li>
+                </ul>
+                <p>Dataset: LTE_KPI.csv</p>
+                <p>Topic: 5G Network Quality for Electrical Engineer</p>
+                <p>Acknowledgement: This dataset is private and confidential industrial asset of Ericsson Vietnam. Only use under education purposes!</p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/add_pins.js"></script>
+    <script src="scripts/needle.js"></script>
+    <script src="scripts/prediction_helpers.js"></script>
+    <script src="scripts/tooltip.js"></script>
+    <script src="scripts/modal.js"></script>
+</body>
+</html>
