@@ -1,0 +1,3 @@
+Method,Accuracy
+Train-Test Split,0.8956721123531097
+10-Fold Cross-Validation,0.8840862035539281
